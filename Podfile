@@ -9,6 +9,7 @@ target 'InventoryManagment' do
   
   pod 'Alamofire'
   pod 'IQKeyboardManager'
+  pod 'Toast-Swift'
 
   target 'InventoryManagmentTests' do
     inherit! :search_paths

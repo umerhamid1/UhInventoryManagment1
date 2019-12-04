@@ -12,9 +12,14 @@
 		3D01BEA42391069C00ABCD50 /* InventoryManagmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D01BEA32391069C00ABCD50 /* InventoryManagmentTests.swift */; };
 		3D01BEAF2391069C00ABCD50 /* InventoryManagmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D01BEAE2391069C00ABCD50 /* InventoryManagmentUITests.swift */; };
 		3D01BEC3239109FC00ABCD50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D01BEC2239109FC00ABCD50 /* LaunchScreen.storyboard */; };
+		3D7BEBFA2397ABB900B47167 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BEBF92397ABB900B47167 /* Links.swift */; };
+		3D7BEBFC2397AD3000B47167 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BEBFB2397AD3000B47167 /* LoginModel.swift */; };
+		3D7BEBFE2397AF0100B47167 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BEBFD2397AF0000B47167 /* user.swift */; };
+		3D7BEC002397AFAC00B47167 /* staticLinkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BEBFF2397AFAC00B47167 /* staticLinkers.swift */; };
 		3D8DF43023927E0B00E33B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DF42F23927E0B00E33B21 /* AppDelegate.swift */; };
 		3D8DF43223927E1C00E33B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DF43123927E1C00E33B21 /* SceneDelegate.swift */; };
 		3D8DF43A23927EF700E33B21 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DF43823927EF700E33B21 /* SWRevealViewController.m */; };
+		3DC50B1A2394467D00FCD1CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC50B192394467D00FCD1CC /* LoginViewController.swift */; };
 		3DFFF6D92392A28E00A34FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFFF6D82392A28E00A34FB4 /* Main.storyboard */; };
 		3DFFF6DB2392A2AB00A34FB4 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 3DFFF6DA2392A2AB00A34FB4 /* Controller */; };
 		3DFFF6DF2392A46A00A34FB4 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6DD2392A46A00A34FB4 /* AddProductViewController.swift */; };
@@ -28,6 +33,11 @@
 		3DFFF6F12392A95C00A34FB4 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6F02392A95C00A34FB4 /* StoreTableViewCell.swift */; };
 		3DFFF6F32392AA6F00A34FB4 /* ViewStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6F22392AA6F00A34FB4 /* ViewStoreViewController.swift */; };
 		3DFFF6F52392B3A900A34FB4 /* AddStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6F42392B3A900A34FB4 /* AddStoreViewController.swift */; };
+		3DFFF6F82393C06900A34FB4 /* GeneralFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6F72393C06900A34FB4 /* GeneralFunctions.swift */; };
+		3DFFF6FE2393C36E00A34FB4 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6FD2393C36E00A34FB4 /* RegistrationModel.swift */; };
+		3DFFF7002393C9F100A34FB4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF6FF2393C9F100A34FB4 /* SignUpViewController.swift */; };
+		3DFFF7032393CFF600A34FB4 /* textFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF7022393CFF600A34FB4 /* textFieldDesign.swift */; };
+		3DFFF7052393D06C00A34FB4 /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFF7042393D06C00A34FB4 /* ButtonDesign.swift */; };
 		4A8B029FF0DA6595064A26FE /* Pods_InventoryManagment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC968B5FC2E441894768F219 /* Pods_InventoryManagment.framework */; };
 		E8DBF1D8487B5D55E8E2CBFD /* Pods_InventoryManagment_InventoryManagmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751ADE1374FE5D877A7B0781 /* Pods_InventoryManagment_InventoryManagmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,11 +71,17 @@
 		3D01BEAE2391069C00ABCD50 /* InventoryManagmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManagmentUITests.swift; sourceTree = "<group>"; };
 		3D01BEB02391069C00ABCD50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D01BEC2239109FC00ABCD50 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D7BEBF92397ABB900B47167 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		3D7BEBFB2397AD3000B47167 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		3D7BEBFD2397AF0000B47167 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		3D7BEBFF2397AFAC00B47167 /* staticLinkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staticLinkers.swift; sourceTree = "<group>"; };
+		3D890C982397B99C0003AB32 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8DF42F23927E0B00E33B21 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D8DF43123927E1C00E33B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D8DF43723927EF600E33B21 /* InventoryManagment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InventoryManagment-Bridging-Header.h"; sourceTree = "<group>"; };
 		3D8DF43823927EF700E33B21 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3D8DF43923927EF700E33B21 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3DC50B192394467D00FCD1CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		3DFFF6D82392A28E00A34FB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DFFF6DA2392A2AB00A34FB4 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		3DFFF6DD2392A46A00A34FB4 /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddProductViewController.swift; path = Controller/AddProductViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +95,11 @@
 		3DFFF6F02392A95C00A34FB4 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreTableViewCell.swift; path = InventoryManagment/Controller/Cell/StoreTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3DFFF6F22392AA6F00A34FB4 /* ViewStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewStoreViewController.swift; path = Controller/ViewStoreViewController.swift; sourceTree = "<group>"; };
 		3DFFF6F42392B3A900A34FB4 /* AddStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddStoreViewController.swift; path = Controller/AddStoreViewController.swift; sourceTree = "<group>"; };
+		3DFFF6F72393C06900A34FB4 /* GeneralFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFunctions.swift; sourceTree = "<group>"; };
+		3DFFF6FD2393C36E00A34FB4 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationModel.swift; path = Model/RegistrationModel.swift; sourceTree = "<group>"; };
+		3DFFF6FF2393C9F100A34FB4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controller/SignUpViewController.swift; sourceTree = "<group>"; };
+		3DFFF7022393CFF600A34FB4 /* textFieldDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = textFieldDesign.swift; path = CustomUI/textFieldDesign.swift; sourceTree = "<group>"; };
+		3DFFF7042393D06C00A34FB4 /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonDesign.swift; path = CustomUI/ButtonDesign.swift; sourceTree = "<group>"; };
 		3F892FE56A1B703211459997 /* Pods_InventoryManagmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		751ADE1374FE5D877A7B0781 /* Pods_InventoryManagment_InventoryManagmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagment_InventoryManagmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13A8979DB6D0B0291DA8D7 /* Pods-InventoryManagment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagment.debug.xcconfig"; path = "Target Support Files/Pods-InventoryManagment/Pods-InventoryManagment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +163,9 @@
 		3D01BE8B2391069A00ABCD50 /* InventoryManagment */ = {
 			isa = PBXGroup;
 			children = (
+				3DFFF7012393CFA000A34FB4 /* CustomUI */,
+				3DFFF6FC2393C34E00A34FB4 /* Model */,
+				3DFFF6F62393C02600A34FB4 /* Networking */,
 				3DFFF6DC2392A3FD00A34FB4 /* Controller */,
 				3DFFF6DA2392A2AB00A34FB4 /* Controller */,
 				3DFFF6D72392A27E00A34FB4 /* Views */,
@@ -149,7 +173,6 @@
 				3D8DF43823927EF700E33B21 /* SWRevealViewController.m */,
 				3D8DF43623927E7400E33B21 /* AppDelegate */,
 				3D01BE9A2391069C00ABCD50 /* Info.plist */,
-				3D01BEC423910ADD00ABCD50 /* Model */,
 				3D01BEBF2391073B00ABCD50 /* SharingFile */,
 				3D8DF43723927EF600E33B21 /* InventoryManagment-Bridging-Header.h */,
 			);
@@ -183,13 +206,6 @@
 			path = SharingFile;
 			sourceTree = "<group>";
 		};
-		3D01BEC423910ADD00ABCD50 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		3D8DF43623927E7400E33B21 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +235,8 @@
 				3DFFF6EC2392A79E00A34FB4 /* VewStockDetailsViewController.swift */,
 				3DFFF6F22392AA6F00A34FB4 /* ViewStoreViewController.swift */,
 				3DFFF6F42392B3A900A34FB4 /* AddStoreViewController.swift */,
+				3DFFF6FF2393C9F100A34FB4 /* SignUpViewController.swift */,
+				3DC50B192394467D00FCD1CC /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -231,6 +249,35 @@
 				3DFFF6F02392A95C00A34FB4 /* StoreTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3DFFF6F62393C02600A34FB4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3DFFF6F72393C06900A34FB4 /* GeneralFunctions.swift */,
+				3D7BEBF92397ABB900B47167 /* Links.swift */,
+				3D7BEBFF2397AFAC00B47167 /* staticLinkers.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3DFFF6FC2393C34E00A34FB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DFFF6FD2393C36E00A34FB4 /* RegistrationModel.swift */,
+				3D7BEBFB2397AD3000B47167 /* LoginModel.swift */,
+				3D7BEBFD2397AF0000B47167 /* user.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3DFFF7012393CFA000A34FB4 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				3DFFF7022393CFF600A34FB4 /* textFieldDesign.swift */,
+				3DFFF7042393D06C00A34FB4 /* ButtonDesign.swift */,
+			);
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 		7AC52A33DE48DE0E728603C2 /* Pods */ = {
@@ -249,6 +296,7 @@
 		A03C582AD13EDB9ADF4BA92E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D890C982397B99C0003AB32 /* Alamofire.framework */,
 				DC968B5FC2E441894768F219 /* Pods_InventoryManagment.framework */,
 				751ADE1374FE5D877A7B0781 /* Pods_InventoryManagment_InventoryManagmentUITests.framework */,
 				3F892FE56A1B703211459997 /* Pods_InventoryManagmentTests.framework */,
@@ -500,16 +548,26 @@
 				3D8DF43223927E1C00E33B21 /* SceneDelegate.swift in Sources */,
 				3DFFF6E42392A4C400A34FB4 /* ViewStockTableViewCell.swift in Sources */,
 				3DFFF6E52392A4C400A34FB4 /* SalesDetailTableViewCell.swift in Sources */,
+				3D7BEBFC2397AD3000B47167 /* LoginModel.swift in Sources */,
 				3DFFF6F32392AA6F00A34FB4 /* ViewStoreViewController.swift in Sources */,
+				3D7BEBFA2397ABB900B47167 /* Links.swift in Sources */,
+				3D7BEC002397AFAC00B47167 /* staticLinkers.swift in Sources */,
 				3DFFF6F12392A95C00A34FB4 /* StoreTableViewCell.swift in Sources */,
+				3DFFF7002393C9F100A34FB4 /* SignUpViewController.swift in Sources */,
 				3DFFF6E92392A52100A34FB4 /* TableViewController.swift in Sources */,
 				3DFFF6ED2392A79E00A34FB4 /* VewStockDetailsViewController.swift in Sources */,
+				3DC50B1A2394467D00FCD1CC /* LoginViewController.swift in Sources */,
 				3D8DF43023927E0B00E33B21 /* AppDelegate.swift in Sources */,
+				3DFFF7032393CFF600A34FB4 /* textFieldDesign.swift in Sources */,
 				3DFFF6F52392B3A900A34FB4 /* AddStoreViewController.swift in Sources */,
 				3DFFF6DF2392A46A00A34FB4 /* AddProductViewController.swift in Sources */,
 				3D8DF43A23927EF700E33B21 /* SWRevealViewController.m in Sources */,
+				3DFFF7052393D06C00A34FB4 /* ButtonDesign.swift in Sources */,
+				3DFFF6F82393C06900A34FB4 /* GeneralFunctions.swift in Sources */,
 				3DFFF6E02392A46A00A34FB4 /* AddSalesDetailViewController.swift in Sources */,
 				3DFFF6EB2392A52100A34FB4 /* ViewStockViewController.swift in Sources */,
+				3D7BEBFE2397AF0100B47167 /* user.swift in Sources */,
+				3DFFF6FE2393C36E00A34FB4 /* RegistrationModel.swift in Sources */,
 				3DFFF6EA2392A52100A34FB4 /* ViewSalesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +711,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -712,7 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56NZPYU7N6;
 				INFOPLIST_FILE = InventoryManagmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -735,7 +794,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56NZPYU7N6;
 				INFOPLIST_FILE = InventoryManagmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

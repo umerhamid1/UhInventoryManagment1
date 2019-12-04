@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FIu-Wi-yKa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -310,6 +310,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve1-I6-uqc">
                                                     <rect key="frame" x="20" y="11" width="50" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ArC-JJ-kmr"/>
                                                         <constraint firstAttribute="width" constant="50" id="weY-kq-aXK"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -319,6 +320,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNq-oK-LF3">
                                                     <rect key="frame" x="20" y="39.5" width="46" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5wK-n0-FZh"/>
                                                         <constraint firstAttribute="width" constant="46" id="vTg-nZ-gyL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -363,12 +365,18 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nry-j8-apN">
                                                     <rect key="frame" x="74" y="11" width="320" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="cbx-oa-9yT"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIn-ZT-MNO">
                                                     <rect key="frame" x="70" y="39.5" width="324" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="x1b-v7-Yjy"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -912,15 +920,15 @@
                                             <constraint firstAttribute="height" constant="100" id="n2v-v6-I9J"/>
                                         </constraints>
                                         <string key="text">niuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sefniuinkjnbjkn rfkbsjkf s ef sef</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2eB-YI-FdI" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2eB-YI-FdI" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="127" y="215" width="272" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n75-zP-yZd" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n75-zP-yZd" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="127" y="357" width="272" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -934,7 +942,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-IY-S7Q" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-IY-S7Q" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="127" y="389" width="272" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -952,7 +960,7 @@
                                         <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
                                         <color key="color" red="0.66659951210000001" green="0.66671365500000002" blue="0.6665844917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-9y-yMJ" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-9y-yMJ" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="127" y="421" width="272" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1060,7 +1068,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storeCell" rowHeight="94" id="v3J-Gc-XKX" customClass="StoreTableViewCell" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storeCell" rowHeight="94" id="v3J-Gc-XKX" customClass="StoreTableViewCell" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v3J-Gc-XKX" id="tNC-f7-9tH">
@@ -1188,13 +1196,13 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tW2-2v-b6p">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-k1-5bz" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-k1-5bz" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="414" width="314" height="24"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-9N-onR" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-9N-onR" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="375" width="314" height="24"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1209,7 +1217,7 @@
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="brp-sV-N1U">
                                         <rect key="frame" x="197" y="501" width="20" height="20"/>
                                     </activityIndicatorView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnk-2J-NFm" customClass="ButtonDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnk-2J-NFm" customClass="ButtonDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="167" y="463" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.3908657962" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1286,7 +1294,7 @@
         <!--Login View Controller-->
         <scene sceneID="BzX-Ug-xer">
             <objects>
-                <viewController id="FIu-Wi-yKa" customClass="LoginViewController" customModule="Inventry_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FIu-Wi-yKa" customClass="LoginViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pH-nE-qmc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1298,27 +1306,25 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVENTORY MANAGER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSl-RZ-AuI">
-                                        <rect key="frame" x="77" y="259" width="260" height="37"/>
+                                        <rect key="frame" x="77" y="262" width="260" height="37"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fv-ew-xD8" customClass="textFieldDesign" customModule="Inventry_Manager">
-                                        <rect key="frame" x="50" y="336" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kashif2@gmail.com" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fv-ew-xD8" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="339" width="314" height="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUu-cS-2xF" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="375" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUu-cS-2xF" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="376" width="314" height="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMw-GS-zPF" customClass="ButtonDesign" customModule="Inventry_Manager" customModuleProvider="target">
-                                        <rect key="frame" x="167" y="419" width="80" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMw-GS-zPF" customClass="ButtonDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="167" y="418" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.39086579623287671" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="4II-y7-4dt"/>
@@ -1326,18 +1332,18 @@
                                         <state key="normal" title="LOGIN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="testing:" destination="FIu-Wi-yKa" eventType="touchUpInside" id="7de-bE-Dkv"/>
+                                        </connections>
                                     </button>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-HU-MqQ">
-                                        <rect key="frame" x="197" y="457" width="20" height="20"/>
-                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYw-3V-sOO">
-                                        <rect key="frame" x="117.5" y="577" width="179" height="21"/>
+                                        <rect key="frame" x="117.5" y="576" width="179" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-6a-Ay8">
-                                        <rect key="frame" x="178.5" y="602" width="57" height="30"/>
+                                        <rect key="frame" x="178.5" y="601" width="57" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <state key="normal" title="Sign up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1351,17 +1357,16 @@
                                     <constraint firstItem="EUu-cS-2xF" firstAttribute="centerY" secondItem="FLZ-CM-MOH" secondAttribute="centerY" id="1h5-yk-FZn"/>
                                     <constraint firstItem="EUu-cS-2xF" firstAttribute="leading" secondItem="FLZ-CM-MOH" secondAttribute="leading" constant="50" id="2LB-VZ-aUc"/>
                                     <constraint firstItem="cYw-3V-sOO" firstAttribute="centerX" secondItem="FLZ-CM-MOH" secondAttribute="centerX" id="CFi-yu-XrD"/>
-                                    <constraint firstItem="cYw-3V-sOO" firstAttribute="top" secondItem="PeG-HU-MqQ" secondAttribute="bottom" constant="100" id="Exu-07-6Ma"/>
                                     <constraint firstItem="EUu-cS-2xF" firstAttribute="top" secondItem="3Fv-ew-xD8" secondAttribute="bottom" constant="15" id="H7F-sV-9d0"/>
                                     <constraint firstItem="EUu-cS-2xF" firstAttribute="centerX" secondItem="FLZ-CM-MOH" secondAttribute="centerX" id="JPY-Un-SWO"/>
                                     <constraint firstItem="3Fv-ew-xD8" firstAttribute="leading" secondItem="FLZ-CM-MOH" secondAttribute="leading" constant="50" id="OaS-Ik-nhA"/>
+                                    <constraint firstItem="cYw-3V-sOO" firstAttribute="leading" secondItem="rMw-GS-zPF" secondAttribute="trailing" constant="-129.5" id="SSf-zv-Fih"/>
                                     <constraint firstAttribute="trailing" secondItem="EUu-cS-2xF" secondAttribute="trailing" constant="50" id="UGd-SQ-vXX"/>
                                     <constraint firstAttribute="trailing" secondItem="3Fv-ew-xD8" secondAttribute="trailing" constant="50" id="bRX-9f-4fy"/>
                                     <constraint firstAttribute="bottom" secondItem="CQt-6a-Ay8" secondAttribute="bottom" constant="20" id="di9-TN-YzV"/>
-                                    <constraint firstItem="PeG-HU-MqQ" firstAttribute="top" secondItem="rMw-GS-zPF" secondAttribute="bottom" constant="8" id="g3G-iq-ccB"/>
-                                    <constraint firstItem="PeG-HU-MqQ" firstAttribute="centerX" secondItem="FLZ-CM-MOH" secondAttribute="centerX" id="gnC-zK-5f1"/>
                                     <constraint firstItem="CQt-6a-Ay8" firstAttribute="centerX" secondItem="FLZ-CM-MOH" secondAttribute="centerX" id="hKR-ud-L7b"/>
                                     <constraint firstItem="NSl-RZ-AuI" firstAttribute="centerX" secondItem="FLZ-CM-MOH" secondAttribute="centerX" id="mJt-Z4-kN6"/>
+                                    <constraint firstItem="cYw-3V-sOO" firstAttribute="top" secondItem="rMw-GS-zPF" secondAttribute="bottom" constant="128" id="oVI-wC-WRE"/>
                                     <constraint firstItem="3Fv-ew-xD8" firstAttribute="top" secondItem="NSl-RZ-AuI" secondAttribute="bottom" constant="40" id="sb3-Ii-2tm"/>
                                     <constraint firstItem="rMw-GS-zPF" firstAttribute="centerX" secondItem="FLZ-CM-MOH" secondAttribute="centerX" id="uqY-w9-b74"/>
                                     <constraint firstItem="CQt-6a-Ay8" firstAttribute="top" secondItem="cYw-3V-sOO" secondAttribute="bottom" constant="4" id="wDc-S4-hSJ"/>
@@ -1385,6 +1390,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="fhA-cr-U78"/>
                     <connections>
+                        <outlet property="emailTextField" destination="3Fv-ew-xD8" id="AS5-EV-K1g"/>
+                        <outlet property="loginButton" destination="rMw-GS-zPF" id="K1M-Qe-JaJ"/>
+                        <outlet property="passwordTextField" destination="EUu-cS-2xF" id="PPq-pH-nrQ"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="login" customClass="SWRevealViewControllerSeguePushController" id="tsa-n9-cL0"/>
                     </connections>
                 </viewController>
@@ -1395,7 +1403,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="MPm-rg-5wq">
             <objects>
-                <viewController id="ezj-4q-RI4" customClass="SignUpViewController" customModule="Inventry_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ezj-4q-RI4" customClass="SignUpViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uhk-Qt-h2r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1403,13 +1411,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tr2-ZI-Amt">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-M1-xYF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-M1-xYF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyQ-3R-cvF" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="259.5" width="317" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="smomerhamid1@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyQ-3R-cvF" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="265.5" width="317" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2K-N8-hMA">
@@ -1418,24 +1425,19 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bB7-iQ-rzz">
-                                        <rect key="frame" x="197" y="530.5" width="20" height="20"/>
-                                    </activityIndicatorView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPk-aB-jLx" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="337.5" width="317" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456a" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPk-aB-jLx" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="339.5" width="317" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kF-gp-7vN">
-                                        <rect key="frame" x="163.5" y="182.5" width="87.5" height="37"/>
+                                        <rect key="frame" x="163.5" y="188.5" width="87.5" height="37"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hB-WP-VGU">
                                         <rect key="frame" x="47" y="407.5" width="320" height="70"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="LAj-2X-M2x"/>
                                         </constraints>
@@ -1444,7 +1446,7 @@
                                             <outlet property="delegate" destination="ezj-4q-RI4" id="UgH-f9-EDC"/>
                                         </connections>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf8-MV-bU3" customClass="ButtonDesign" customModule="Inventry_Manager" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf8-MV-bU3" customClass="ButtonDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="167" y="492.5" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.3908657962" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1453,23 +1455,23 @@
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonisPressed:" destination="ezj-4q-RI4" eventType="touchUpInside" id="oi9-vu-X6P"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-Fo-dUw" customClass="textFieldDesign" customModule="Inventry_Manager" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="298.5" width="317" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="umerhamid1" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-Fo-dUw" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="302.5" width="317" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OPk-aB-jLx" secondAttribute="trailing" id="3Uo-1c-8HM"/>
-                                    <constraint firstItem="bB7-iQ-rzz" firstAttribute="centerX" secondItem="NbU-M1-xYF" secondAttribute="centerX" id="498-0g-Dem"/>
                                     <constraint firstItem="2hB-WP-VGU" firstAttribute="top" secondItem="M2K-N8-hMA" secondAttribute="bottom" constant="10" id="5Q0-rv-YSS"/>
                                     <constraint firstItem="ZyQ-3R-cvF" firstAttribute="top" secondItem="4kF-gp-7vN" secondAttribute="bottom" constant="40" id="DSF-CH-NP9"/>
                                     <constraint firstItem="ZyQ-3R-cvF" firstAttribute="leading" secondItem="NbU-M1-xYF" secondAttribute="leading" constant="50" id="HVO-yK-EI9"/>
                                     <constraint firstItem="2hB-WP-VGU" firstAttribute="centerX" secondItem="NbU-M1-xYF" secondAttribute="centerX" id="JXZ-LF-A1w"/>
                                     <constraint firstItem="hhh-Fo-dUw" firstAttribute="leading" secondItem="NbU-M1-xYF" secondAttribute="leading" constant="50" id="Jz3-pv-DyS"/>
-                                    <constraint firstItem="bB7-iQ-rzz" firstAttribute="top" secondItem="Rf8-MV-bU3" secondAttribute="bottom" constant="8" id="KmC-Sn-Fgd"/>
                                     <constraint firstItem="4kF-gp-7vN" firstAttribute="centerX" secondItem="NbU-M1-xYF" secondAttribute="centerX" id="MK0-1z-Isf"/>
                                     <constraint firstItem="Rf8-MV-bU3" firstAttribute="centerX" secondItem="NbU-M1-xYF" secondAttribute="centerX" id="Mes-UO-and"/>
                                     <constraint firstItem="Rf8-MV-bU3" firstAttribute="top" secondItem="2hB-WP-VGU" secondAttribute="bottom" constant="15" id="PeJ-WX-AbU"/>
@@ -1479,9 +1481,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2hB-WP-VGU" secondAttribute="trailing" id="epK-JW-O3g"/>
                                     <constraint firstAttribute="trailing" secondItem="ZyQ-3R-cvF" secondAttribute="trailing" id="fSR-mN-g0h"/>
                                     <constraint firstItem="M2K-N8-hMA" firstAttribute="centerY" secondItem="NbU-M1-xYF" secondAttribute="centerY" id="hwD-TX-y5e"/>
-                                    <constraint firstAttribute="bottom" secondItem="bB7-iQ-rzz" secondAttribute="bottom" constant="20" id="iBz-Bg-mQv"/>
                                     <constraint firstItem="M2K-N8-hMA" firstAttribute="centerX" secondItem="NbU-M1-xYF" secondAttribute="centerX" id="iyd-Si-GZS"/>
-                                    <constraint firstItem="Rf8-MV-bU3" firstAttribute="centerX" secondItem="bB7-iQ-rzz" secondAttribute="centerX" id="rGx-1f-meo"/>
                                     <constraint firstItem="OPk-aB-jLx" firstAttribute="top" secondItem="hhh-Fo-dUw" secondAttribute="bottom" constant="15" id="vTF-E1-Z8H"/>
                                     <constraint firstItem="M2K-N8-hMA" firstAttribute="top" secondItem="OPk-aB-jLx" secondAttribute="bottom" constant="15" id="wNY-e4-w1r"/>
                                 </constraints>
@@ -1502,6 +1502,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="3dI-EP-c6x"/>
                     <connections>
+                        <outlet property="emailTextField" destination="ZyQ-3R-cvF" id="Zqq-wX-5Qk"/>
+                        <outlet property="nameTextField" destination="hhh-Fo-dUw" id="o2p-aD-tkC"/>
+                        <outlet property="passwordTextField" destination="OPk-aB-jLx" id="b2O-Np-g9h"/>
+                        <outlet property="pickerText" destination="2hB-WP-VGU" id="jfe-Ik-YYh"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="signUp" customClass="SWRevealViewControllerSeguePushController" id="Doa-Pv-UVV"/>
                     </connections>
                 </viewController>

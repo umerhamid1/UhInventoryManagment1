@@ -49,6 +49,7 @@ extension ViewSalesViewController{
         cell.productName.text = "" //self.salesData[indexPath.row].productName
         cell.productName.text = "" //self.salesData[indexPath.row].productName
         cell.productName.text = "" //self.salesData[indexPath.row].productName
+       // cell.line
         return cell
     }
     
