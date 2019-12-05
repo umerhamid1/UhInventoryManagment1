@@ -7,6 +7,7 @@ target 'InventoryManagment' do
 
   # Pods for InventoryManagment
   
+  pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'IQKeyboardManager'
   pod 'Toast-Swift'

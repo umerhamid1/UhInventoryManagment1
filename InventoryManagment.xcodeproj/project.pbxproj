@@ -19,6 +19,9 @@
 		3D8DF43023927E0B00E33B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DF42F23927E0B00E33B21 /* AppDelegate.swift */; };
 		3D8DF43223927E1C00E33B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DF43123927E1C00E33B21 /* SceneDelegate.swift */; };
 		3D8DF43A23927EF700E33B21 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DF43823927EF700E33B21 /* SWRevealViewController.m */; };
+		3DBBBF7523992C1A00EF1302 /* getSalesRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBBF7423992C1A00EF1302 /* getSalesRecord.swift */; };
+		3DBBBF7723992CF400EF1302 /* SalesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBBF7623992CF400EF1302 /* SalesData.swift */; };
+		3DBBBF7923992D9200EF1302 /* sales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBBF7823992D9200EF1302 /* sales.swift */; };
 		3DC50B1A2394467D00FCD1CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC50B192394467D00FCD1CC /* LoginViewController.swift */; };
 		3DFFF6D92392A28E00A34FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFFF6D82392A28E00A34FB4 /* Main.storyboard */; };
 		3DFFF6DB2392A2AB00A34FB4 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 3DFFF6DA2392A2AB00A34FB4 /* Controller */; };
@@ -81,6 +84,9 @@
 		3D8DF43723927EF600E33B21 /* InventoryManagment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InventoryManagment-Bridging-Header.h"; sourceTree = "<group>"; };
 		3D8DF43823927EF700E33B21 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3D8DF43923927EF700E33B21 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3DBBBF7423992C1A00EF1302 /* getSalesRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getSalesRecord.swift; sourceTree = "<group>"; };
+		3DBBBF7623992CF400EF1302 /* SalesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SalesData.swift; path = Model/SalesData.swift; sourceTree = "<group>"; };
+		3DBBBF7823992D9200EF1302 /* sales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sales.swift; path = Model/sales.swift; sourceTree = "<group>"; };
 		3DC50B192394467D00FCD1CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		3DFFF6D82392A28E00A34FB4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DFFF6DA2392A2AB00A34FB4 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 				3DFFF6F72393C06900A34FB4 /* GeneralFunctions.swift */,
 				3D7BEBF92397ABB900B47167 /* Links.swift */,
 				3D7BEBFF2397AFAC00B47167 /* staticLinkers.swift */,
+				3DBBBF7423992C1A00EF1302 /* getSalesRecord.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -267,6 +274,8 @@
 				3DFFF6FD2393C36E00A34FB4 /* RegistrationModel.swift */,
 				3D7BEBFB2397AD3000B47167 /* LoginModel.swift */,
 				3D7BEBFD2397AF0000B47167 /* user.swift */,
+				3DBBBF7623992CF400EF1302 /* SalesData.swift */,
+				3DBBBF7823992D9200EF1302 /* sales.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -555,13 +564,16 @@
 				3DFFF6F12392A95C00A34FB4 /* StoreTableViewCell.swift in Sources */,
 				3DFFF7002393C9F100A34FB4 /* SignUpViewController.swift in Sources */,
 				3DFFF6E92392A52100A34FB4 /* TableViewController.swift in Sources */,
+				3DBBBF7723992CF400EF1302 /* SalesData.swift in Sources */,
 				3DFFF6ED2392A79E00A34FB4 /* VewStockDetailsViewController.swift in Sources */,
 				3DC50B1A2394467D00FCD1CC /* LoginViewController.swift in Sources */,
 				3D8DF43023927E0B00E33B21 /* AppDelegate.swift in Sources */,
 				3DFFF7032393CFF600A34FB4 /* textFieldDesign.swift in Sources */,
+				3DBBBF7923992D9200EF1302 /* sales.swift in Sources */,
 				3DFFF6F52392B3A900A34FB4 /* AddStoreViewController.swift in Sources */,
 				3DFFF6DF2392A46A00A34FB4 /* AddProductViewController.swift in Sources */,
 				3D8DF43A23927EF700E33B21 /* SWRevealViewController.m in Sources */,
+				3DBBBF7523992C1A00EF1302 /* getSalesRecord.swift in Sources */,
 				3DFFF7052393D06C00A34FB4 /* ButtonDesign.swift in Sources */,
 				3DFFF6F82393C06900A34FB4 /* GeneralFunctions.swift in Sources */,
 				3DFFF6E02392A46A00A34FB4 /* AddSalesDetailViewController.swift in Sources */,

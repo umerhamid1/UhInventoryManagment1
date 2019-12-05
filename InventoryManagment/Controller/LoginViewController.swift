@@ -10,7 +10,7 @@ import UIKit
 import Toast_Swift
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -19,26 +19,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-    
-      
-
+        
+        
+        
+        
         // Do any additional setup after loading the view.
-   
-    
+        
+        
     }
-  
     
-    override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-          self.navigationController?.setNavigationBarHidden(true, animated: animated)
-      }
-      
-      override func viewWillDisappear(_ animated: Bool) {
-          super.viewWillDisappear(animated)
-          self.navigationController?.setNavigationBarHidden(false, animated: animated)
-      }
+    
+ 
     
     @IBAction func testing(_ sender: Any) {
         loginButton.isEnabled = false
@@ -54,15 +46,20 @@ class LoginViewController: UIViewController {
                     self.view.hideToastActivity()
                     GeneralFunctions.gF.showMessage(title: "Error", msg: error!, on: self)
                     self.loginButton.isEnabled = true
-                   
+                    
                 }else{
+                    
+                    self.performSegue(withIdentifier: "login", sender: self)
                     self.view.hideToastActivity()
                     
-                    GeneralFunctions.gF.showMessage(title: "SuccessFull", msg: "Login Sucessful", on: self)
-                
-                    self.performSegue(withIdentifier: "login", sender: self)
+                    
                     self.loginButton.isEnabled = true
+                    
+                    
+                    
+                    
                 }
+                
             }
             
         }
@@ -70,10 +67,10 @@ class LoginViewController: UIViewController {
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "login"{
-//            
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if segue.identifier == "login"{
+    //            
+    //        }
+    //    }
     
 }

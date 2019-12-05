@@ -7,6 +7,8 @@
 //
 import Alamofire
 import UIKit
+import SwiftyJSON
+import Toast_Swift
 
 class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerViewDelegate {
     
@@ -35,25 +37,29 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
         
         if let email = emailTextField.text , let password = passwordTextField.text , let name = nameTextField.text{
             
-            self.signUp { (response) in
-                print("signup response : \(response)")
+            
+            RegistrationModel.rM.registration(email: email, password: password, name: name, controller: self, role: role) { (response) in
+                
+                if response != ""{
+                    
+                    self.view.hideToastActivity()
+                    
+                    GeneralFunctions.gF.showMessage(title: "Error", msg: response, on: self)
+                   // self.loginButton.isEnabled = true
+                }else{
+                    
+                   self.performSegue(withIdentifier: "signUp", sender: self)
+                   self.view.hideToastActivity()
+                   
+                   
+                  // self.loginButton.isEnabled = true
+                }
+                //  print("Registraion response : \(response)")
+                
+                
+                
+                
             }
-            //            RegistrationModel.rM.registration(email: email, password: password, name: name, controller: self, role: role) { (response) in
-            //
-            //                if response != ""{
-            //                    self.view.hideToastActivity()
-            //                    GeneralFunctions.gF.showMessage(title: "Error", msg: response, on: self)
-            //                }else{
-            //
-            //                    GeneralFunctions.gF.showMessage(title: "msg", msg: "Successful", on: self)
-            //                     self.view.hideToastActivity()
-            //                }
-            //                     //  print("Registraion response : \(response)")
-            //
-            //                       //prepare(for: UIStoryboardSegue, sender: self)
-            //
-            //
-            //                   }
         }else{
             self.view.hideToastActivity()
             GeneralFunctions.gF.showMessage(title: "Error", msg: "Enter complete Data", on: self)
@@ -61,81 +67,11 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
         
     }
     
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        
-    }
     
     
     
     
-    var User:user?
     
-    func signUp(completionHandler: @escaping (_ UserData: String?) -> ()){
-        
-        
-        Alamofire.request(staticLinkers.link.signIn, method: .post, parameters: ["email":emailTextField.text!, "name": nameTextField.text!, "password": passwordTextField.text!, "role": true] , encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {(response) in
-            if let error = response.error{
-                let err = error.localizedDescription
-                completionHandler(err)
-            }else{
-                
-                let temp = try! response.result.value as! [String : Any] //get() as! [String:Any]
-                let err =  temp["error"] as! String
-                if err != ""{
-                    completionHandler(err)
-                }else{
-                    let data = temp["data"] as! [String:Any]
-                    staticLinkers.token = (data["token"] as! String)
-                    var userData = data["user"] as! [String:Any]
-                    userData["password"] = ""
-                    let jsonData = try! JSONSerialization.data(withJSONObject: userData, options: JSONSerialization.WritingOptions.prettyPrinted)
-                    let decoder = JSONDecoder()
-                    do
-                    {
-                        self.User = try decoder.decode(user.self, from: jsonData)
-                        staticLinkers.currentUser = self.User
-                    }
-                    catch
-                    {
-                        completionHandler(error.localizedDescription)
-                    }
-                    completionHandler("")
-                }
-                
-            }
-        })
-        
-        
-        //        Alamofire.request(staticLinkers.link.signUp, method: .post, parameters: ["email":emailTextField.text!, "name": nameTextField.text!, "password": passwordTextField.text!, "role": true], encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {(response) in
-        //               if let error = response.error{
-        //                   let err = error.localizedDescription
-        //                   completionHandler(err)
-        //               }else{
-        //                let temp = try! response.result.value as! [String : Any] //get() as! [String:Any]
-        //                   let err =  temp["error"] as! String
-        //                   if err != ""{
-        //                       completionHandler(err)
-        //                   }else{
-        //                       let data = temp["data"] as! [String:Any]
-        //                       staticLinkers.token = (data["token"] as! String)
-        //                       var userData = data["user"] as! [String:Any]
-        //                       userData["password"] = ""
-        //                       let jsonData = try! JSONSerialization.data(withJSONObject: userData, options: JSONSerialization.WritingOptions.prettyPrinted)
-        //                       let decoder = JSONDecoder()
-        //                       do
-        //                       {
-        //                           self.User = try decoder.decode(user.self, from: jsonData)
-        //                           staticLinkers.currentUser = self.User
-        //                       }
-        //                       catch
-        //                       {
-        //                           completionHandler(error.localizedDescription)
-        //                       }
-        //                       completionHandler("")
-        //                   }
-        //               }
-        //           })
-    }
     
     
     /*

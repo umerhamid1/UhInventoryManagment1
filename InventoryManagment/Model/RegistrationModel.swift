@@ -43,7 +43,7 @@ public class RegistrationModel {
     }
     
     func signUp(email : String , name : String , password : String ,role : Bool,completion: @escaping (_ UserData: String?) -> ()){
-           Alamofire.request(staticLinkers.link.signUp, method: .post, parameters: ["email":email, "name":name, "password":password, "role":role], encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {(response) in
+           Alamofire.request(staticLinkers.link.signUp, method: .post, parameters: ["email":email, "name":name, "password":password, "Role":role], encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {(response) in
                if let error = response.error{
                    let err = error.localizedDescription
                    completion(err)

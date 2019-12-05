@@ -19,7 +19,7 @@ class TableViewController: UITableViewController {
         self.imageView.layer.masksToBounds = true
         self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
         self.imageView.clipsToBounds = true
-        //self.userName.text = staticLinker.currentUser?.name
+        self.userName.text =  staticLinkers.currentUser?.name
     }
 
 
