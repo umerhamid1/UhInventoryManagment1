@@ -23,16 +23,9 @@ class ViewSalesViewController: UIViewController,UITableViewDelegate,UITableViewD
           self.refreshControl.addTarget(self, action: #selector(_loadData), for: .valueChanged)
       }
       
-    override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-     }
+
+
      
-     override func viewWillDisappear(_ animated: Bool) {
-         super.viewWillDisappear(animated)
-         self.navigationController?.setNavigationBarHidden(false, animated: animated)
-     }
-    
     
       @objc private func _loadData(){
           self.viewSalesObj.getSalesRecordData(

@@ -13,8 +13,8 @@ import Alamofire
 class getSalesRecord{
     
     func getSalesRecordData(//loginObj:login,
-                            
-                            completionHandler: @escaping (_ error: String?, _ data:[salesData]?) -> ()){
+        
+        completionHandler: @escaping (_ error: String?, _ data:[salesData]?) -> ()){
         
         Login.loginOb.login(email: staticLinkers.currentUser.email!, password: staticLinkers.currentUser.password!) { (error) in
             DispatchQueue.main.async {
@@ -27,13 +27,19 @@ class getSalesRecord{
                 }
             }
         }
-
+        
         
         
     }
     
     private func getSalesRecordDataExt(completionHandler: @escaping (_ error: String?, _ data:[salesData]?) -> ()){
-        Alamofire.request(staticLinkers.link.getSales, method: .get, parameters:nil, encoding: JSONEncoding.default, headers: ["Content-Type":"application/json","token":staticLinkers.token]).responseJSON(completionHandler: {(response) in
+        Alamofire.request(staticLinkers.link.getSales,
+                          method: .get,
+                          //parameters:nil,
+                        //  encoding: JSONEncoding.default,
+                          headers: ["token" :  staticLinkers.token] //["Content-Type":"application/json","token":staticLinkers.token]
+            
+        ).responseJSON(completionHandler: {(response) in
             if let error = response.error{
                 let err = error.localizedDescription
                 completionHandler(err,nil)

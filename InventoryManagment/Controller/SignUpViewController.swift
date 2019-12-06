@@ -27,9 +27,23 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true
+        , animated: true)
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          self.navigationController?.setNavigationBarHidden(false, animated: animated)
+      }
+    
+    @IBAction func backButtonisPrssed(_ sender: Any) {
+        //self.navigationController?.popToRootViewController(animated: true)
+        
+        navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func signUpButtonisPressed(_ sender: Any) {
         self.view.makeToastActivity(.center)

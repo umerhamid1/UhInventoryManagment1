@@ -30,7 +30,7 @@
         <!--Table View Controller-->
         <scene sceneID="dST-nu-hAV">
             <objects>
-                <tableViewController id="5wR-vd-m6j" customClass="TableViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="5wR-vd-m6j" customClass="TableViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rIe-wM-1jx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:5Zf-9r-ITk:image" translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-9r-ITk">
-                                                    <rect key="frame" x="60" y="11.5" width="160" height="159.5"/>
+                                                    <rect key="frame" x="60" y="11" width="160" height="160"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="559-zh-DlS"/>
                                                         <constraint firstAttribute="height" constant="160" id="CqQ-4e-WoJ"/>
@@ -267,6 +267,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="pYx-6o-s8M" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="avS-vR-lsf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -507,7 +510,7 @@
         <!--Stock-->
         <scene sceneID="5Hm-rQ-e6W">
             <objects>
-                <viewController id="0V7-Hi-KQq" customClass="ViewStockViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0V7-Hi-KQq" customClass="ViewStockViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zqu-v1-eY9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,7 +585,7 @@
                     <connections>
                         <outlet property="menuButton" destination="fP2-As-Tp6" id="9d2-bs-9g2"/>
                         <outlet property="viewStockTableView" destination="NoA-gd-dit" id="c93-IO-b7P"/>
-                        <segue destination="Kgk-jf-hf3" kind="show" id="Oam-46-JB7"/>
+                        <segue destination="Kgk-jf-hf3" kind="show" identifier="productDetail" id="Oam-46-JB7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiZ-wb-T4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -594,6 +597,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pYx-6o-s8M" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hg1-bH-wnp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LMs-bV-hgG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -630,16 +634,19 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addSales:" destination="zl6-XW-qqg" eventType="touchUpInside" id="BfN-kV-LVY"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Store" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ols-6Y-b1e" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="297" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sales Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="opR-GC-yO2" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="375" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -651,41 +658,36 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7k-8o-SbT" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="414" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZA-2Q-6mR" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="336" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Unit Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bd4-bW-uZr" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="453" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-4c-W2a">
-                                        <rect key="frame" x="197" y="542" width="20" height="20"/>
-                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bd4-bW-uZr" firstAttribute="top" secondItem="b7k-8o-SbT" secondAttribute="bottom" constant="15" id="0fn-u4-cad"/>
+                                    <constraint firstAttribute="bottom" secondItem="s30-PV-vNa" secondAttribute="bottom" constant="247" id="1L0-98-APG"/>
                                     <constraint firstItem="0H1-4F-7D2" firstAttribute="centerX" secondItem="Wpx-Nl-pwg" secondAttribute="centerX" id="8kA-sz-T0A"/>
                                     <constraint firstItem="b7k-8o-SbT" firstAttribute="leading" secondItem="Wpx-Nl-pwg" secondAttribute="leading" constant="50" id="9Mg-AX-SVf"/>
                                     <constraint firstItem="s30-PV-vNa" firstAttribute="top" secondItem="bd4-bW-uZr" secondAttribute="bottom" constant="20" id="A6E-I7-fYJ"/>
                                     <constraint firstItem="b7k-8o-SbT" firstAttribute="top" secondItem="opR-GC-yO2" secondAttribute="bottom" constant="15" id="BaQ-84-eNi"/>
                                     <constraint firstItem="opR-GC-yO2" firstAttribute="centerX" secondItem="Wpx-Nl-pwg" secondAttribute="centerX" id="BoV-Tb-vfG"/>
                                     <constraint firstAttribute="trailing" secondItem="opR-GC-yO2" secondAttribute="trailing" constant="50" id="EuG-Kh-weT"/>
-                                    <constraint firstItem="ghr-4c-W2a" firstAttribute="top" secondItem="s30-PV-vNa" secondAttribute="bottom" constant="15" id="GcL-ss-TgX"/>
                                     <constraint firstItem="opR-GC-yO2" firstAttribute="leading" secondItem="Wpx-Nl-pwg" secondAttribute="leading" constant="50" id="HOA-ut-zek"/>
                                     <constraint firstAttribute="trailing" secondItem="ols-6Y-b1e" secondAttribute="trailing" constant="50" id="Ph1-2C-Rls"/>
-                                    <constraint firstItem="ghr-4c-W2a" firstAttribute="centerX" secondItem="Wpx-Nl-pwg" secondAttribute="centerX" id="VDf-cA-NbB"/>
                                     <constraint firstItem="fZA-2Q-6mR" firstAttribute="top" secondItem="ols-6Y-b1e" secondAttribute="bottom" constant="15" id="ekt-FL-wl8"/>
                                     <constraint firstAttribute="trailing" secondItem="bd4-bW-uZr" secondAttribute="trailing" constant="50" id="fiC-z2-oJA"/>
-                                    <constraint firstAttribute="bottom" secondItem="ghr-4c-W2a" secondAttribute="bottom" constant="212" id="fqc-ON-q0H"/>
                                     <constraint firstItem="ols-6Y-b1e" firstAttribute="top" secondItem="0H1-4F-7D2" secondAttribute="bottom" constant="40" id="iWD-3D-YG0"/>
                                     <constraint firstItem="bd4-bW-uZr" firstAttribute="leading" secondItem="Wpx-Nl-pwg" secondAttribute="leading" constant="50" id="jaF-Bb-ELM"/>
                                     <constraint firstItem="ols-6Y-b1e" firstAttribute="leading" secondItem="Wpx-Nl-pwg" secondAttribute="leading" constant="50" id="kfc-4A-asP"/>
@@ -717,7 +719,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addSalesBtn" destination="s30-PV-vNa" id="XAO-4p-aqL"/>
                         <outlet property="menuButton" destination="IMA-yJ-MGI" id="tdB-5D-jMf"/>
+                        <outlet property="productTxt" destination="fZA-2Q-6mR" id="QAn-kr-0TQ"/>
+                        <outlet property="quantityTxt" destination="b7k-8o-SbT" id="gGs-D8-FQg"/>
+                        <outlet property="salesDateTxt" destination="opR-GC-yO2" id="hJf-mw-tD0"/>
+                        <outlet property="storeTxt" destination="ols-6Y-b1e" id="foB-tx-dbq"/>
+                        <outlet property="unitPriceTxt" destination="bd4-bW-uZr" id="nuK-kp-6RN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiV-FM-bwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -758,7 +766,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phr-g6-Erc" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="414" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
@@ -777,37 +785,37 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="AddProductBtn:" destination="r2r-Ym-HKM" eventType="touchUpInside" id="NiC-5t-MCc"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQc-gU-V0U" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="375" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUF-T7-Hz9" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="297" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-jX-RvN" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="453" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvB-0X-L8b" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="492" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aOU-Rw-7gT">
-                                        <rect key="frame" x="197" y="581" width="20" height="20"/>
-                                    </activityIndicatorView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Manufacturer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5U1-dq-dpr" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="50" y="336" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -826,17 +834,15 @@
                                     <constraint firstItem="NvB-0X-L8b" firstAttribute="leading" secondItem="D9e-Dp-4yY" secondAttribute="leading" constant="50" id="QfY-Yu-fpb"/>
                                     <constraint firstItem="cQc-gU-V0U" firstAttribute="centerX" secondItem="D9e-Dp-4yY" secondAttribute="centerX" id="TQy-Vd-SOU"/>
                                     <constraint firstItem="cQc-gU-V0U" firstAttribute="top" secondItem="5U1-dq-dpr" secondAttribute="bottom" constant="15" id="Tcc-G1-4JN"/>
+                                    <constraint firstAttribute="bottom" secondItem="IQF-ly-ieo" secondAttribute="bottom" constant="208" id="Vuw-Yb-9Xe"/>
                                     <constraint firstItem="NvB-0X-L8b" firstAttribute="top" secondItem="2aD-jX-RvN" secondAttribute="bottom" constant="15" id="YhL-v0-oTU"/>
                                     <constraint firstItem="phr-g6-Erc" firstAttribute="top" secondItem="cQc-gU-V0U" secondAttribute="bottom" constant="15" id="eeY-n8-xq9"/>
                                     <constraint firstItem="phr-g6-Erc" firstAttribute="leading" secondItem="D9e-Dp-4yY" secondAttribute="leading" constant="50" id="gNQ-Xl-gc9"/>
-                                    <constraint firstItem="aOU-Rw-7gT" firstAttribute="top" secondItem="IQF-ly-ieo" secondAttribute="bottom" constant="15" id="jgS-WN-Tv3"/>
                                     <constraint firstItem="LUF-T7-Hz9" firstAttribute="top" secondItem="fz9-jI-KDS" secondAttribute="bottom" constant="40" id="nIC-dD-QAI"/>
-                                    <constraint firstItem="aOU-Rw-7gT" firstAttribute="centerX" secondItem="D9e-Dp-4yY" secondAttribute="centerX" id="o0t-1t-San"/>
                                     <constraint firstItem="cQc-gU-V0U" firstAttribute="leading" secondItem="D9e-Dp-4yY" secondAttribute="leading" constant="50" id="orB-mM-09K"/>
                                     <constraint firstItem="IQF-ly-ieo" firstAttribute="top" secondItem="NvB-0X-L8b" secondAttribute="bottom" constant="20" id="p7c-Es-A9T"/>
                                     <constraint firstAttribute="trailing" secondItem="5U1-dq-dpr" secondAttribute="trailing" constant="50" id="tIc-rF-Xs8"/>
                                     <constraint firstItem="LUF-T7-Hz9" firstAttribute="leading" secondItem="D9e-Dp-4yY" secondAttribute="leading" constant="50" id="u4t-fm-ERP"/>
-                                    <constraint firstAttribute="bottom" secondItem="aOU-Rw-7gT" secondAttribute="bottom" constant="213" id="wxF-U9-mx7"/>
                                     <constraint firstItem="fz9-jI-KDS" firstAttribute="centerX" secondItem="D9e-Dp-4yY" secondAttribute="centerX" id="xcu-gT-p7T"/>
                                     <constraint firstAttribute="trailing" secondItem="2aD-jX-RvN" secondAttribute="trailing" constant="50" id="xpV-8F-rXJ"/>
                                 </constraints>
@@ -861,12 +867,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addProductBtn" destination="IQF-ly-ieo" id="V0z-8l-l1s"/>
+                        <outlet property="amount" destination="phr-g6-Erc" id="87T-cg-rta"/>
+                        <outlet property="descript" destination="cQc-gU-V0U" id="guA-T5-uEE"/>
+                        <outlet property="manufacturer" destination="5U1-dq-dpr" id="F8s-IO-9V0"/>
                         <outlet property="menuButton" destination="v1f-s1-CfK" id="Fkn-Rh-N2k"/>
+                        <outlet property="productName" destination="LUF-T7-Hz9" id="rAg-sn-fhI"/>
+                        <outlet property="quantity" destination="2aD-jX-RvN" id="hMm-23-3LN"/>
+                        <outlet property="txtDatePicker" destination="NvB-0X-L8b" id="HzV-WB-JSs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPc-O8-Fk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6117.3913043478269" y="-646.20535714285711"/>
+            <point key="canvasLocation" x="7027.5362318840589" y="-646.20535714285711"/>
         </scene>
         <!--Stock Details-->
         <scene sceneID="7fK-7s-h1U">
@@ -956,10 +969,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7GL-os-oFb">
-                                        <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
-                                        <color key="color" red="0.66659951210000001" green="0.66671365500000002" blue="0.6665844917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </activityIndicatorView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-9y-yMJ" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
                                         <rect key="frame" x="127" y="421" width="272" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -972,6 +981,9 @@
                                             <constraint firstAttribute="height" constant="80" id="pTd-zY-z7g"/>
                                         </constraints>
                                         <state key="normal" image="icons8-save-100"/>
+                                        <connections>
+                                            <action selector="EditProduct:" destination="Kgk-jf-hf3" eventType="touchUpInside" id="aeQ-K4-fis"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Changes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apZ-Da-a1W">
                                         <rect key="frame" x="152" y="538" width="110" height="21"/>
@@ -1013,7 +1025,6 @@
                                     <constraint firstItem="O3L-r3-M3a" firstAttribute="leading" secondItem="CgA-eN-fET" secondAttribute="leading" constant="15" id="Tof-bp-14e"/>
                                     <constraint firstItem="g1Q-92-VzV" firstAttribute="top" secondItem="HrY-gy-nXK" secondAttribute="bottom" constant="15" id="UUK-Em-zwO"/>
                                     <constraint firstItem="O3L-r3-M3a" firstAttribute="top" secondItem="Kx2-IY-S7Q" secondAttribute="bottom" constant="15" id="Vjt-4q-pC9"/>
-                                    <constraint firstItem="7GL-os-oFb" firstAttribute="centerY" secondItem="CgA-eN-fET" secondAttribute="centerY" id="ZQl-87-nF0"/>
                                     <constraint firstItem="eDH-eO-lHo" firstAttribute="top" secondItem="7Ch-9y-yMJ" secondAttribute="bottom" constant="20" id="alH-g8-Jlu"/>
                                     <constraint firstItem="dwM-Md-f60" firstAttribute="top" secondItem="CgA-eN-fET" secondAttribute="top" constant="40" id="br2-4n-1Ml"/>
                                     <constraint firstItem="gh4-t2-bTv" firstAttribute="leading" secondItem="CgA-eN-fET" secondAttribute="leading" constant="15" id="fw2-6W-hKD"/>
@@ -1026,7 +1037,6 @@
                                     <constraint firstAttribute="trailing" secondItem="iyM-gJ-thP" secondAttribute="trailing" constant="8" id="vzB-GL-GQs"/>
                                     <constraint firstItem="iyM-gJ-thP" firstAttribute="centerX" secondItem="CgA-eN-fET" secondAttribute="centerX" id="x3s-v0-7kG"/>
                                     <constraint firstItem="g1Q-92-VzV" firstAttribute="leading" secondItem="CgA-eN-fET" secondAttribute="leading" constant="15" id="xjy-j5-aLl"/>
-                                    <constraint firstItem="7GL-os-oFb" firstAttribute="centerX" secondItem="CgA-eN-fET" secondAttribute="centerX" id="yHK-Y4-yfW"/>
                                     <constraint firstItem="iyM-gJ-thP" firstAttribute="top" secondItem="dwM-Md-f60" secondAttribute="bottom" constant="19.333333333333314" id="zfG-eS-oVE"/>
                                 </constraints>
                             </scrollView>
@@ -1046,6 +1056,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Stock Details" id="MOu-37-9Xn"/>
                     <connections>
+                        <outlet property="amount" destination="7Ch-9y-yMJ" id="lsq-ac-9ci"/>
+                        <outlet property="date" destination="n75-zP-yZd" id="w5U-xO-SKf"/>
+                        <outlet property="descriptions" destination="HrY-gy-nXK" id="lAi-7B-M2m"/>
+                        <outlet property="manufacturer" destination="2eB-YI-FdI" id="gjY-I1-OxG"/>
+                        <outlet property="productName" destination="iyM-gJ-thP" id="DXv-S5-4he"/>
+                        <outlet property="quantity" destination="Kx2-IY-S7Q" id="xsX-Y7-Cpc"/>
                         <outlet property="saveBtn" destination="eDH-eO-lHo" id="zu4-wy-Rt6"/>
                     </connections>
                 </viewController>
@@ -1180,7 +1196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4P-en-jBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5208.695652173913" y="-646.20535714285711"/>
+            <point key="canvasLocation" x="6117.3913043478269" y="-646.20535714285711"/>
         </scene>
         <!--Add Store View Controller-->
         <scene sceneID="GMR-cT-RGY">
@@ -1196,29 +1212,26 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tW2-2v-b6p">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-k1-5bz" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="414" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="china" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWQ-k1-5bz" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="415" width="314" height="25.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-9N-onR" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="375" width="314" height="24"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="alibaba" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-9N-onR" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="374.5" width="314" height="25.5"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-pV-r1x">
-                                        <rect key="frame" x="157.5" y="298" width="99" height="37"/>
+                                        <rect key="frame" x="157.5" y="297.5" width="99" height="37"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="brp-sV-N1U">
-                                        <rect key="frame" x="197" y="501" width="20" height="20"/>
-                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnk-2J-NFm" customClass="ButtonDesign" customModule="InventoryManagment" customModuleProvider="target">
-                                        <rect key="frame" x="167" y="463" width="80" height="30"/>
+                                        <rect key="frame" x="167" y="465.5" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.3908657962" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="yMD-Wl-Zeb"/>
@@ -1226,6 +1239,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="kVS-HL-z1M" eventType="touchUpInside" id="t6s-RJ-vMs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1233,15 +1249,13 @@
                                     <constraint firstAttribute="trailing" secondItem="iYV-9N-onR" secondAttribute="trailing" constant="50" id="7I2-hf-GtX"/>
                                     <constraint firstItem="bnk-2J-NFm" firstAttribute="top" secondItem="vWQ-k1-5bz" secondAttribute="bottom" constant="25" id="PEV-Ld-U6U"/>
                                     <constraint firstItem="iYV-9N-onR" firstAttribute="centerY" secondItem="tW2-2v-b6p" secondAttribute="centerY" id="QmA-tG-AUB"/>
-                                    <constraint firstItem="brp-sV-N1U" firstAttribute="top" secondItem="bnk-2J-NFm" secondAttribute="bottom" constant="8" id="Uhe-hy-aZ1"/>
                                     <constraint firstItem="vWQ-k1-5bz" firstAttribute="centerX" secondItem="bnk-2J-NFm" secondAttribute="centerX" id="UyC-gx-5Ll"/>
-                                    <constraint firstItem="bnk-2J-NFm" firstAttribute="centerX" secondItem="brp-sV-N1U" secondAttribute="centerX" id="V8h-Vo-Tg2"/>
                                     <constraint firstItem="iYV-9N-onR" firstAttribute="leading" secondItem="tW2-2v-b6p" secondAttribute="leading" constant="50" id="XGV-Sj-xLm"/>
+                                    <constraint firstAttribute="bottom" secondItem="bnk-2J-NFm" secondAttribute="bottom" constant="281" id="YT9-2U-diB"/>
                                     <constraint firstItem="iYV-9N-onR" firstAttribute="top" secondItem="kHV-pV-r1x" secondAttribute="bottom" constant="40" id="ZuQ-cq-X8M"/>
                                     <constraint firstItem="vWQ-k1-5bz" firstAttribute="leading" secondItem="tW2-2v-b6p" secondAttribute="leading" constant="50" id="aW8-Ag-8Ry"/>
                                     <constraint firstItem="vWQ-k1-5bz" firstAttribute="top" secondItem="iYV-9N-onR" secondAttribute="bottom" constant="15" id="ftQ-Cc-mt2"/>
                                     <constraint firstAttribute="trailing" secondItem="vWQ-k1-5bz" secondAttribute="trailing" constant="50" id="joI-2b-hZW"/>
-                                    <constraint firstAttribute="bottom" secondItem="brp-sV-N1U" secondAttribute="bottom" constant="20" id="nEm-Gy-2vN"/>
                                     <constraint firstItem="kHV-pV-r1x" firstAttribute="centerX" secondItem="tW2-2v-b6p" secondAttribute="centerX" id="q28-hz-2NM"/>
                                     <constraint firstItem="iYV-9N-onR" firstAttribute="centerX" secondItem="tW2-2v-b6p" secondAttribute="centerX" id="uFG-PG-sVV"/>
                                 </constraints>
@@ -1266,12 +1280,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="locationTextField" destination="vWQ-k1-5bz" id="nXQ-p7-e3s"/>
                         <outlet property="menuButton" destination="BPj-uV-xGa" id="3q3-bv-VnC"/>
+                        <outlet property="saveButton" destination="bnk-2J-NFm" id="R70-Kg-j70"/>
+                        <outlet property="storeNameTextField" destination="iYV-9N-onR" id="7HI-IP-HID"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65A-RD-zUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4026.0869565217395" y="-690.40178571428567"/>
+            <point key="canvasLocation" x="4936.231884057971" y="-690.40178571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ujW-be-xEW">
@@ -1289,7 +1306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TI8-yd-0ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587" y="-625"/>
+            <point key="canvasLocation" x="3497.1014492753625" y="-625.44642857142856"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="BzX-Ug-xer">
@@ -1349,7 +1366,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ezj-4q-RI4" kind="show" id="Dfi-2C-qV3"/>
+                                            <segue destination="z5j-sO-ry2" kind="show" id="Dfi-2C-qV3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1398,12 +1415,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPK-G7-Xie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="-646"/>
+            <point key="canvasLocation" x="625" y="-646"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="MPm-rg-5wq">
             <objects>
-                <viewController id="ezj-4q-RI4" customClass="SignUpViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ezj-4q-RI4" customClass="SignUpViewController" customModule="InventoryManagment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uhk-Qt-h2r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1411,7 +1428,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tr2-ZI-Amt">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-M1-xYF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-M1-xYF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="smomerhamid1@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyQ-3R-cvF" customClass="textFieldDesign" customModule="InventoryManagment" customModuleProvider="target">
@@ -1482,6 +1499,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ZyQ-3R-cvF" secondAttribute="trailing" id="fSR-mN-g0h"/>
                                     <constraint firstItem="M2K-N8-hMA" firstAttribute="centerY" secondItem="NbU-M1-xYF" secondAttribute="centerY" id="hwD-TX-y5e"/>
                                     <constraint firstItem="M2K-N8-hMA" firstAttribute="centerX" secondItem="NbU-M1-xYF" secondAttribute="centerX" id="iyd-Si-GZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rf8-MV-bU3" secondAttribute="bottom" constant="251.5" id="uTZ-xO-QXo"/>
                                     <constraint firstItem="OPk-aB-jLx" firstAttribute="top" secondItem="hhh-Fo-dUw" secondAttribute="bottom" constant="15" id="vTF-E1-Z8H"/>
                                     <constraint firstItem="M2K-N8-hMA" firstAttribute="top" secondItem="OPk-aB-jLx" secondAttribute="bottom" constant="15" id="wNY-e4-w1r"/>
                                 </constraints>
@@ -1500,7 +1518,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rpq-BM-xaE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3dI-EP-c6x"/>
+                    <navigationItem key="navigationItem" id="3dI-EP-c6x">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="QaU-sT-obk">
+                            <connections>
+                                <action selector="backButtonisPrssed:" destination="ezj-4q-RI4" id="h0V-sG-2EM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="ZyQ-3R-cvF" id="Zqq-wX-5Qk"/>
                         <outlet property="nameTextField" destination="hhh-Fo-dUw" id="o2p-aD-tkC"/>
@@ -1511,7 +1535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNb-fS-nwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="-646"/>
+            <point key="canvasLocation" x="2660.8695652173915" y="-646.20535714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="geV-33-CHb">
@@ -1530,6 +1554,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDG-NX-cX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-70" y="-646"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hiv-Iu-dYU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="z5j-sO-ry2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SJ1-28-f6H"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zwf-yf-W0N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ezj-4q-RI4" kind="relationship" relationship="rootViewController" id="Hr5-um-8yi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2b-B6-43U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750.7246376811595" y="-646.20535714285711"/>
         </scene>
     </scenes>
     <resources>
@@ -1639,7 +1682,7 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <image name="store" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Na1-x5-WdR"/>
-        <segue reference="qil-qy-t5o"/>
+        <segue reference="5z0-Lq-D6R"/>
+        <segue reference="Doa-Pv-UVV"/>
     </inferredMetricsTieBreakers>
 </document>
