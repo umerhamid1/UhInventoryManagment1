@@ -63,7 +63,14 @@ class AddProductViewController: UIViewController {
                         GeneralFunctions.gF.showMessage(title: "Alert", msg: error!, on: self)
                     }else{
                         
-                        GeneralFunctions.gF.showMessage(title: "Successful", msg: message!, on: self)
+                        self.productName.text = ""
+                        self.manufacturer.text = ""
+                        self.descript.text = ""
+                        self.amount.text = ""
+                        self.quantity.text = ""
+                        self.txtDatePicker.text = ""
+                        
+                        GeneralFunctions.gF.askToAddMoreData(title: "SucessFull", msg: "Product is  Added , do you want to add more Product", controller: self, navigation: self.navigationController!)
                     }
                 }
             })

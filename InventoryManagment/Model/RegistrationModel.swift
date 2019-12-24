@@ -26,8 +26,8 @@ public class RegistrationModel {
                 
                 self.signUp(email: email, name: name, password: password, role: role) { (error) in
                     if error != "" {
-                        //completion(error!)
-                        GeneralFunctions.gF.showMessage(title: "Error", msg: error!, on: controller)
+                        completion(error!)
+//                        GeneralFunctions.gF.showMessage(title: "Error", msg: error!, on: controller)
                         return
                     }else{
                         completion(error!)

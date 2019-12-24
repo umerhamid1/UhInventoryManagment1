@@ -48,8 +48,18 @@ class AddStoreViewController: UIViewController {
                         GeneralFunctions.gF.showMessage(title: "Alert", msg: error!, on: self)
                         
                     }else{
-                        GeneralFunctions.gF.showMessage(title: "Successful", msg: message ?? "testing", on: self)
                         
+                        
+                        self.storeNameTextField.text = ""
+                        
+                        self.locationTextField.text = ""
+                        
+                        GeneralFunctions.gF.askToAddMoreData(title: "SucessFull", msg: "Store Sucessfully Added , do you want to add more Data", controller: self, navigation: self.navigationController!)
+                       
+                        
+                       
+                        
+                       
                         
                     }
                 }

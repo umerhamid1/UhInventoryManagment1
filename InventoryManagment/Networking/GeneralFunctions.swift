@@ -15,6 +15,15 @@ public class GeneralFunctions{
     private init(){
         
     }
+    
+    func popToSalesView(na : UINavigationController){
+        
+        
+        _ = na.popToRootViewController(animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "mainVC") as! ViewSalesViewController
+        na.pushViewController(vc, animated: true)
+    }
 
     
     // here alert view Controller
@@ -25,6 +34,24 @@ public class GeneralFunctions{
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         controller.present(alert, animated: true, completion: nil)
         
+    }
+    
+    func askToAddMoreData(title : String , msg : String , controller : UIViewController , navigation : UINavigationController){
+        let refreshAlert = UIAlertController(title: title , message: msg, preferredStyle: UIAlertController.Style.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            
+            GeneralFunctions.gF.popToSalesView(na: navigation)
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+          
+            
+        }))
+        
+        
+        
+        controller.present(refreshAlert, animated: true, completion: nil)
     }
     
     // end alert view controller

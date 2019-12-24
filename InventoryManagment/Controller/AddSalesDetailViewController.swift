@@ -53,23 +53,25 @@ class AddSalesDetailViewController: UIViewController,UIPickerViewDelegate, UIPic
           self.addSalesBtn.isEnabled = false
           if let _ = self.storeTxt.text, let _ = self.productTxt.text, let date = self.salesDateTxt.text, let quantity = self.quantityTxt.text, let price = self.unitPriceTxt.text{
               self.salesObj = addInventorySales(pid: self.productIndex, sid: self.storeIndex, salesDate: date, quantity: Int(quantity)!, stockSold: Int(price)!)
+            
             self.salesObj.addSales(email : staticLinkers.currentUser.email!,password: staticLinkers.currentUser.password!, completionHandler: { (error,message)  in
                   DispatchQueue.main.async {
                       
                     self.view.hideToastActivity()
                       self.addSalesBtn.isEnabled = true
                       if error != ""{
-//                          let alert = UIAlertController(title: "Alert", message: error, preferredStyle: UIAlertController.Style.alert)
-//                          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                          self.present(alert, animated: true, completion: nil)
                         
-                        GeneralFunctions.gF.showMessage(title: "Alert", msg: error!, on: self)
+                        self.storeTxt.text = ""
+                        self.productTxt.text = ""
+                        self.salesDateTxt.text = ""
+                        self.quantityTxt.text = ""
+                        self.unitPriceTxt.text = ""
+                        
+                        GeneralFunctions.gF.askToAddMoreData(title: "SucessFull", msg: "Sales is  Added , do you want to add more Sales", controller: self, navigation: self.navigationController!)
                       }else{
                         
                         GeneralFunctions.gF.showMessage(title: "Alert", msg: message!, on: self)
-//                          let alert = UIAlertController(title: "Successful", message: message, preferredStyle: UIAlertController.Style.alert)
-//                          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                          self.present(alert, animated: true, completion: nil)
+
                       }
                   }
               })

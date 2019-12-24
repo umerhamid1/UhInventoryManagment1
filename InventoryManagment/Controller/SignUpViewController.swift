@@ -27,8 +27,7 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(true
-        , animated: true)
+        //self.navigationController?.setNavigationBarHidden(true, animated: true)
         // Do any additional setup after loading the view.
     }
     
@@ -36,6 +35,11 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
           super.viewWillAppear(animated)
           self.navigationController?.setNavigationBarHidden(false, animated: animated)
       }
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
     @IBAction func backButtonisPrssed(_ sender: Any) {
         //self.navigationController?.popToRootViewController(animated: true)
@@ -53,17 +57,18 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
             
             
             RegistrationModel.rM.registration(email: email, password: password, name: name, controller: self, role: role) { (response) in
-                
+                self.view.hideToastActivity()
                 if response != ""{
                     
-                    self.view.hideToastActivity()
+                    
                     
                     GeneralFunctions.gF.showMessage(title: "Error", msg: response, on: self)
                    // self.loginButton.isEnabled = true
                 }else{
-                    
-                   self.performSegue(withIdentifier: "signUp", sender: self)
-                   self.view.hideToastActivity()
+                   // self.view.hideToastActivity()
+             //   GeneralFunctions.gF.showMessage(title: "SuccessFull", msg: "Registration is completed", on: self)
+                self.performSegue(withIdentifier: "signUp", sender: self)
+                   
                    
                    
                   // self.loginButton.isEnabled = true

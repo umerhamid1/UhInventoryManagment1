@@ -18,6 +18,7 @@ struct sales : Codable {
     let totalAmount : Int?
     
     enum CodingKeys: String, CodingKey {
+        
         case id = "id"
         case productID = "productID"
         case quantity = "quantity"
@@ -25,6 +26,7 @@ struct sales : Codable {
         case stockSold = "stockSold"
         case storeID = "storeID"
         case totalAmount = "totalAmount"
+        
     }
     
     init(from decoder: Decoder) throws {
